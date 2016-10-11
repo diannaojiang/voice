@@ -156,18 +156,16 @@ int main(int argc, char* argv[])
 																*
 																* 详细参数说明请参阅《讯飞语音云MSC--API文档》
 																*/
-	string voice_name, speed, pitch,rdn;
+	string voice_name, speed, pitch;
 	cout << endl << "合成发音人voice_name = ";
 	cin >> voice_name;
 	cout << endl << "合成音频对应的语速 默认50 speed = ";
 	cin >> speed;
 	cout << endl << "合成音频的音调 默认50 pitch = ";
 	cin >> pitch;
-	cout << endl << "合成音频的风格 普通2 播报3 rdn = ";
-	cin >> rdn;
 	const char* session_begin_params;
 	string params;
-	params = "voice_name = " + voice_name + ", text_encoding = utf-8, sample_rate = 16000, speed = " + speed + ", volume = 50, pitch = " + pitch + ", rdn = " + rdn;
+	params = "voice_name = " + voice_name + ", text_encoding = utf-8, sample_rate = 16000, speed = " + speed + ", volume = 50, pitch = " + pitch + ", rdn = 2";
 
 	session_begin_params = params.c_str();
 
